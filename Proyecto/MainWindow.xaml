@@ -1,0 +1,14 @@
+﻿<Window x:Class="Proyecto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgvProducts" Margin="76,88,76,87"/>
+        <Button Content="Listar Clientes" HorizontalAlignment="Center" Margin="0,49,0,0" VerticalAlignment="Top" Width="276" Click="Button_Click"/>
+
+    </Grid>
+</Window>
