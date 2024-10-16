@@ -8,7 +8,18 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name="dgvProducts" Margin="76,88,76,87"/>
-        <Button Content="Listar Clientes" HorizontalAlignment="Center" Margin="0,49,0,0" VerticalAlignment="Top" Width="276" Click="Button_Click"/>
+        <Button Content="Listar Productos" HorizontalAlignment="Left" Margin="76,10,0,0" VerticalAlignment="Top" Width="131" Click="Button_Click"/>
+        <Button Content="Insertar Productos" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click_1" RenderTransformOrigin="0.27,0.67"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="141,46,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="202,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+        <Label Content="Precio:" HorizontalAlignment="Left" Margin="326,46,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="376,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Stock:" HorizontalAlignment="Left" Margin="501,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.033,0.515"/>
+        <TextBox x:Name="txtStock" HorizontalAlignment="Left" Margin="547,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="chkActive" Content="Active" HorizontalAlignment="Left" Margin="672,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.07,0.025"/>
+        <Label Content="Id:" HorizontalAlignment="Left" Margin="76,44,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="99,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.532,0.262"/>
+        <Button Content="Actualizar Productos" HorizontalAlignment="Left" Margin="594,10,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.559,0.503" Click="Button_Click_2"/>
 
     </Grid>
 </Window>

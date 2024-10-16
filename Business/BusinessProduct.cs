@@ -11,5 +11,15 @@ namespace Business
         { 
             return dataProduct.ListProducts();
         }
+
+        public void InsertProduct(Product product)
+        {
+            dataProduct.InsertProduct(product);
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            dataProduct.UpdateProduct(product);
+        }
     }
 }

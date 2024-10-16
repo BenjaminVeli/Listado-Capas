@@ -15,7 +15,7 @@ namespace Data
             SqlConnection connection = new SqlConnection(Conexion.cadena);
             connection.Open();
 
-            SqlCommand command = new SqlCommand("ListProducts", connection);
+            SqlCommand command = new SqlCommand("ListarProductos", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             List<Product> listProducts = new List<Product>();
@@ -36,5 +36,44 @@ namespace Data
 
             return listProducts;
         }
+
+        public void InsertProduct(Product product)
+        {
+            SqlConnection connection = new SqlConnection(Conexion.cadena);
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("InsertarProductos", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            // Parámetros del procedimiento almacenado
+            command.Parameters.AddWithValue("@name", product.name);
+            command.Parameters.AddWithValue("@price", product.price);
+            command.Parameters.AddWithValue("@stock", product.stock);
+            command.Parameters.AddWithValue("@active", product.active);
+
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+
+        public void UpdateProduct(Product product)
+        {
+            SqlConnection connection = new SqlConnection(Conexion.cadena);
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("ActualizarProductos", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            // Parámetros del procedimiento almacenado
+            command.Parameters.AddWithValue("@productId", product.product_id);
+            command.Parameters.AddWithValue("@name", product.name);
+            command.Parameters.AddWithValue("@price", product.price);
+            command.Parameters.AddWithValue("@stock", product.stock);
+            command.Parameters.AddWithValue("@active", product.active);
+
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
     }
 }
